@@ -1,4 +1,4 @@
-package br.com.hello;
+package br.com.hello.servlets;
 
 import jakarta.servlet.ServletException;
 import jakarta.servlet.annotation.WebServlet;
