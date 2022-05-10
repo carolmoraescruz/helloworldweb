@@ -7,12 +7,22 @@ import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
 
+import br.com.hello.adapter.ConnectionFactory;
 import br.com.hello.entity.Contato;
 
 public class ContatoRepository implements IRepository<Contato>{
 	private Connection connection;
 	
 	//jdbc
+	
+	public ContatoRepository() {
+		try {
+			connection = ConnectionFactory.getConnection();
+		} catch (SQLException e) {
+			e.printStackTrace();
+		}
+
+	}
 	
 	@Override
 	public void save(Contato contato) {
